@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Словарь</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+        body {
+            padding-top: 70px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Сленговый словарь</a>
+    </nav>
+    <div class="container mt-5">
+        <div class="search-container">
+            <form method="POST" action="/search_word">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search_word" name="search_word" placeholder="Search for a word" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+        <div class="form-container">
+            <h2 class="text-center mt-5 mb-3">Добавь новое слово!</h2>
+            <form method="POST" action="/add_word">
+                <div class="form-group">
+                    <label for="word">Слово:</label>
+                    <input type="text" class="form-control" id="word" name="word" required>
+                </div>
+                <div class="form-group">
+                    <label for="definition">Значение:</label>
+                    <textarea class="form-control" id="definition" name="definition" rows="3" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Подтвердить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

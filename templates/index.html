@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Словарь</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+        body {
+            padding-top: 70px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Сленговый словарь</a>
+    </nav>
+    <div class="container mt-5">
+        <div class="search-container">
+            <form method="POST" action="/search_word">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search_word" name="search_word" placeholder="Search for a word" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Поиск</button>
+            </form>
+        </div>
+        <div class="text-center mt-3">
+            <a href="/add_word" class="btn btn-success">Добавить новое слово</a>
+        </div>
+    </div>
+</body>
+</html>

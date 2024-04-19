@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Словарь</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+        body {
+            padding-top: 70px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="/">Сленговый словарь</a>
+    </nav>
+    <div class="container mt-5">
+        <h2>Информация о слове</h2>
+        <p><strong>Слово:</strong> {{ word }}</p>
+        <p><strong>Значение:</strong> {{ definition }}</p>
+    </div>
+</body>
+</html>
